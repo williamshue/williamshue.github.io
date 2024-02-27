@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Homepage
-permalink: /homepage/
+title: About
+permalink: /
 ---
 
 I'm William Shue, I work full time as a software developer and I'm also a student at Georgia Institue of Technology, purusing a Master's degree in Computatioanl Science and Engienering. 
