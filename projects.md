@@ -3,6 +3,7 @@ layout: page
 title: Projects
 permalink: /projects
 ---
+
 # Fractal creation in C 
 [Fractal creation in C](https://github.com/williamshue/Fractals)
 # Node-Graph-Visualizer

@@ -1,9 +1,9 @@
----
+<!------
 layout: page
 math: mathjax
 title: Linear Algebra
 permalink: /linear_algebra/
----
+--->
 
 $$\begin{align*}
 \textbf{Method 1: Subtracting Equations} \\
