@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects
 ---
 ## SEC 10-K Filings Insight Analysis Dashboard
-[SEC 10-K Filings Insight Analysis Dashboard](https://williamshue.net/GATech-FinServInnovLab-SummerTask/)
+[SEC 10-K Filings Insight Analysis Dashboard](https://williamshue.net/SEC_10K_Filings_Insight_Analysis_Dashboard/)
 ## New York Times Trained LSTM Stock Price Predictor
 [Report](/projects/cse_6740_report)
 ## Fractal creation in C 
