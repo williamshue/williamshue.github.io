@@ -1,0 +1,19 @@
+title: William Shue
+description: Software engineer. I make compute-heavy software fast, in C++ and Python.
+url: "https://williamshue.net"
+
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  # Turns $$...$$ into \( \) and \[ \], which KaTeX renders on posts with `math: true`.
+  math_engine: mathjax
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
