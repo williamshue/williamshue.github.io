@@ -1,0 +1,94 @@
+---
+layout: default
+---
+<div class="home">
+  <aside class="card">
+    <!-- Photo goes here. When you have one, save it as assets/me.jpg and replace this div with:
+         <img class="photo" src="/assets/me.jpg" alt="William Shue"> -->
+    <div class="photo" aria-hidden="true"></div>
+    <div class="card-text">
+      <h1>William Shue</h1>
+      <p class="role">Software engineer, C++ and Python</p>
+      <ul class="links">
+        <li><a href="/resume.pdf">Resume</a></li>
+        <li><a href="https://github.com/williamshue">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/william-shue/">LinkedIn</a></li>
+        <li><a href="mailto:williamshue1@gmail.com">williamshue1@gmail.com</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <section class="intro">
+      <p>Hi, I'm William. I spent the last six years at Georgia Tech Research Institute turning slow, research-grade code into fast, dependable software, mostly in C++ and Python.</p>
+      <p>I'm moving to Los Angeles and looking for a senior engineering role on a commercial product. I'll be writing here about performance, numerical computing, and whatever I'm building.</p>
+    </section>
+
+    <section>
+      <h2>Selected work</h2>
+      <ul class="work">
+        <li><strong>250&times; real time.</strong> Rewrote a production MATLAB application in C++. <span class="stack">C++, CGAL, Eigen, OpenCV</span></li>
+        <li><strong>10&times; faster.</strong> Ported numerical MATLAB routines to multithreaded C++. <span class="stack">C++, multithreading</span></li>
+        <li><strong>Real-time trajectory planning.</strong> Built a C++ planner that deconflicts paths for multiple autonomous vehicles on a live system. <span class="stack">C++, numerical optimization</span></li>
+        <li><strong>3,000 users.</strong> Designed and shipped a full-stack finance tracking app used across a 3,000-person organization. <span class="stack">Python, React, Kubernetes</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Side projects</h2>
+      <ul class="work">
+        <li><a href="/SEC_10K_Filings_Insight_Analysis_Dashboard/"><strong>SEC 10-K insight dashboard</strong></a>. Pulls companies' annual SEC filings, summarizes them with a financial language model, and scores their sentiment. <span class="stack">Python, Hugging Face, <a href="https://github.com/williamshue/SEC_10K_Filings_Insight_Analysis_Dashboard">source</a></span></li>
+        <li>More on <a href="https://github.com/williamshue">GitHub</a>, including fractals in C and a node graph visualizer.</li>
+      </ul>
+    </section>
+
+    {% if site.posts.size > 0 %}
+    <section>
+      <h2>Writing</h2>
+      {% for post in site.posts %}
+        {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% if year != last_year %}
+          {% unless forloop.first %}</ul>{% endunless %}
+          <h3 class="year">{{ year }}</h3>
+          <ul class="posts">
+          {% assign last_year = year %}
+        {% endif %}
+        <li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% if forloop.last %}</ul>{% endif %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <section>
+      <h2>Experience</h2>
+      <dl class="history">
+        <dt>Georgia Tech Research Institute <span>2020&ndash;present</span></dt>
+        <dd>Research Scientist II since 2025, Research Scientist I 2020&ndash;2025. C++ and Python for scientific and real-time systems, plus an image reconstruction pipeline for large sensor datasets. Onboarded and mentored new engineers and interns.</dd>
+        <dt>LifePod Solutions <span>2019&ndash;2020</span></dt>
+        <dd>Software QA Automation Engineer. Built a mobile test suite in Appium, Java, and TestNG that automated more than 100 hours of manual QA a year.</dd>
+        <dt>Harvard Medical School <span>2019</span></dt>
+        <dd>Junior DevOps System Administrator. Deployed Globus GridFTP on AWS EC2 to speed up large dataset transfers for research groups.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <dl class="history">
+        <dt>Georgia Institute of Technology <span>2024</span></dt>
+        <dd>M.S. Computational Science and Engineering</dd>
+        <dt>Wentworth Institute of Technology <span>2020</span></dt>
+        <dd>B.S. Computer Science, cum laude</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ul class="plain">
+        <li><a href="https://ieeexplore.ieee.org/abstract/document/8790159">GADE with Fitness-based Opposition and Tidal Mutation</a>, IEEE Congress on Evolutionary Computation (CEC), 2019</li>
+        <li><a href="https://ieeexplore.ieee.org/abstract/document/8992977">A Thermally Regulated Footwear and Alerting System</a>, IEEE UEMCON, 2019</li>
+      </ul>
+    </section>
+
+    <footer class="site-foot">&copy; {{ site.time | date: "%Y" }} William Shue</footer>
+  </main>
+</div>
