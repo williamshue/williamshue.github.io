@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="post-page">
+  <nav class="crumb"><a href="/">William Shue</a></nav>
+
+  <article>
+    <header class="post-head">
+      <h1>{{ page.title }}</h1>
+      <p class="post-date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    </header>
+
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </article>
+
+  <footer class="post-foot">
+    <a href="/">More writing and about me</a>
+  </footer>
+</div>
